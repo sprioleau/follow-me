@@ -11,16 +11,30 @@
 </head>
 
 <body>
-  <h1>Mimi Game</h1>
-  <div class="game">
+  <header>
+    <h1>Mimi Game</h1>
+    <div class="scoreboard">
+      <h2>Score: <span class="scoreboard__score">0</span></h2>
+    </div>
+    </header>
+    <main class="game">
+      <h3 class="instructions"></h3>
     <div class="game__controller">
       <div class="game__buttons">
-        <div class="game__button button-1"></div>
-        <div class="game__button button-2"></div>
-        <div class="game__button button-3"></div>
-        <div class="game__button button-4"></div>
+        <div class="game__button" data-index="1" data-color="green"></div>
+        <div class="game__button" data-index="2" data-color="red"></div>
+        <div class="game__button" data-index="3" data-color="yellow"></div>
+        <div class="game__button" data-index="4" data-color="blue"></div>
       </div>
     </div>
+  </main>
+  <div class="toolbar">
+    <button class="toolbar__button start">
+      Start Game
+    </button>
+    <button class="toolbar__button reset hide">
+      Reset
+    </button>
   </div>
 </body>
 
