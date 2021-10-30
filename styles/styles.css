@@ -1,0 +1,78 @@
+:root {
+  --ui-bg: rgb(26, 85, 145);
+  --ui-text: white;
+  --game-controller-bg: rgb(12, 48, 85);
+  --corner-radius: 2rem;
+  --gap: 1.5rem;
+  --game-controller-size: 60vmin;
+  --green: rgb(125, 224, 125);
+  --red: rgb(248, 73, 73);
+  --yellow: rgb(236, 236, 41);
+  --blue: rgb(109, 184, 255);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100vh;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--ui-bg);
+  color: var(--ui-text);
+}
+
+h1 {
+  margin-bottom: 2rem;
+}
+
+.game__controller {
+  border-radius: var(--corner-radius);
+  background-color: var(--game-controller-bg);
+  height: var(--game-controller-size);
+  width: var(--game-controller-size);
+}
+
+.game__buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  height: 100%;
+  gap: var(--gap);
+  padding: var(--gap);
+}
+
+.game__button {
+  border-radius: calc(var(--corner-radius) / 2);
+}
+
+.game__button:active {
+  filter: brightness(1.35);
+}
+
+.button-1 {
+  background-color: var(--green);
+}
+
+.button-2 {
+  background-color: var(--red);
+}
+
+.button-3 {
+  background-color: var(--yellow);
+}
+
+.button-4 {
+  background-color: var(--blue);
+}
